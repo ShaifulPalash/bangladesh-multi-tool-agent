@@ -1,17 +1,21 @@
+<div align="center">
+
 # 🇧🇩 Bangladesh Multi-Tool AI Agent
 
-[![CI](https://github.com/ShaifulPalash/bangladesh-multi-tool-agent/actions/workflows/ci.yml/badge.svg)](https://github.com/ShaifulPalash/bangladesh-multi-tool-agent/actions/workflows/ci.yml)
-![Python](https://img.shields.io/badge/Python-3.12+-3776AB?logo=python\&logoColor=white)
-![LangChain](https://img.shields.io/badge/LangChain-1.x-1C3C3C?logo=langchain\&logoColor=white)
-![LangGraph](https://img.shields.io/badge/LangGraph-Agent-FF6B35)
-![Gemini](https://img.shields.io/badge/Google%20Gemini-3.6%20Flash-4285F4?logo=google\&logoColor=white)
-![SQLite](https://img.shields.io/badge/SQLite-Database-003B57?logo=sqlite\&logoColor=white)
-![Streamlit](https://img.shields.io/badge/Streamlit-UI-FF4B4B?logo=streamlit\&logoColor=white)
-![Tavily](https://img.shields.io/badge/Tavily-Web%20Search-111827)
-![DDGS](https://img.shields.io/badge/DDGS-DuckDuckGo%20Fallback-DE5833?logo=duckduckgo\&logoColor=white)
-![License](https://img.shields.io/badge/License-Educational-lightgrey)
+**A multi-tool AI agent for Bangladesh that intelligently routes user queries to structured databases and web search tools.**
 
-> A LangChain/LangGraph-based multi-tool AI agent that answers Bangladesh-focused questions by intelligently routing each query to the appropriate SQLite database or web-search tool.
+[![CI](https://github.com/ShaifulPalash/bangladesh-multi-tool-agent/actions/workflows/ci.yml/badge.svg)](https://github.com/ShaifulPalash/bangladesh-multi-tool-agent/actions/workflows/ci.yml)
+[![Python](https://img.shields.io/badge/Python-3.12+-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![LangChain](https://img.shields.io/badge/LangChain-1.x-1C3C3C?logo=langchain&logoColor=white)](https://www.langchain.com/)
+[![LangGraph](https://img.shields.io/badge/LangGraph-Agent-FF6B35)](https://www.langchain.com/langgraph)
+[![Google Gemini](https://img.shields.io/badge/Google%20Gemini-3.6%20Flash-4285F4?logo=google&logoColor=white)](https://ai.google.dev/)
+[![SQLite](https://img.shields.io/badge/SQLite-Database-003B57?logo=sqlite&logoColor=white)](https://www.sqlite.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-UI-FF4B4B?logo=streamlit&logoColor=white)](https://streamlit.io/)
+[![Tavily](https://img.shields.io/badge/Tavily-Web%20Search-111827)](https://tavily.com/)
+[![DDGS](https://img.shields.io/badge/DDGS-DuckDuckGo%20Fallback-DE5833?logo=duckduckgo&logoColor=white)](https://github.com/deedy5/ddgs)
+[![License](https://img.shields.io/badge/License-Educational-lightgrey)](#license)
+
+</div>
 
 ---
 
