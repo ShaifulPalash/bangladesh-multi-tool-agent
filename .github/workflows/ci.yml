@@ -1,0 +1,37 @@
+name: CI
+
+# Runs on every push and pull request against main, so broken code is
+# caught before it merges — this is the same lint+test gate most real
+# Python repos use.
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -r requirements-dev.txt
+
+      - name: Lint with ruff
+        run: ruff check .
+
+      - name: Run tests
+        # Only tests/test_sql_safety.py and tests/test_build_databases.py run
+        # here — they're pure logic tests with no API key or network
+        # dependency, which is exactly what makes them safe to run in CI on
+        # every push. Full agent behavior (real LLM calls) is smoke-tested
+        # manually via scripts/test_queries.py, since that needs a paid
+        # OPENAI_API_KEY and shouldn't run on every commit from a fork.
+        run: pytest tests/ -v

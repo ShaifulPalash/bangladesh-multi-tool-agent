@@ -1,0 +1,20 @@
+# Run the whole project (DB build + Streamlit UI) with one command:
+#   docker compose up --build
+# Then open http://localhost:8501
+#
+# Your .env file (copied from .env.example) is read for API keys.
+# data/ and db/ are mounted as volumes so downloaded CSVs and built SQLite
+# databases persist across container restarts — you only pay the download
+# + build cost once.
+
+services:
+  app:
+    build: .
+    ports:
+      - "8501:8501"
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+      - ./db:/app/db
+    restart: unless-stopped

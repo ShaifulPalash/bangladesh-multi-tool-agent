@@ -1,0 +1,24 @@
+# --- Core LangChain stack ---
+langchain>=0.3.0
+langchain-community>=0.3.0
+langchain-openai>=0.2.0
+langgraph>=0.2.0
+
+langchain-google-genai>=4.0.0  # use for free
+
+# --- Data handling ---
+datasets>=2.20.0
+huggingface_hub>=0.24.0
+pandas>=2.2.0
+SQLAlchemy>=2.0.0
+
+# --- Web search tools ---
+langchain-tavily>=0.2.0       # preferred: Tavily integration
+tavily-python>=0.5.0          # Tavily API client
+ddgs>=9.16.0                  # fallback: DuckDuckGo, no API key required
+
+# --- Utilities ---
+python-dotenv>=1.0.0
+
+# --- Web UI ---
+streamlit>=1.37.0

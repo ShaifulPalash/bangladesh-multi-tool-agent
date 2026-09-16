@@ -1,0 +1,5 @@
+# Dev/CI-only tools — not needed to just run the app, only to develop it.
+-r requirements.txt
+
+pytest>=8.0.0
+ruff>=0.6.0          # fast linter + formatter (replaces flake8 + black + isort)

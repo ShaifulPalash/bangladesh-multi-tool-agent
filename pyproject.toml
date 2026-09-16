@@ -1,0 +1,11 @@
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+exclude = [".venv", "Bangladesh_Multi_Tool_Agent.ipynb", "data", "db"]
+
+[tool.ruff.lint]
+# E/F = pyflakes+pycodestyle core errors, I = import sorting, W = pycodestyle warnings.
+select = ["E", "F", "I", "W"]
+ignore = [
+    "E501",  # line length is handled by the formatter, not worth failing CI over
+]
