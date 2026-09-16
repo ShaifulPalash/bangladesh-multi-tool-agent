@@ -1,21 +1,17 @@
-<div align="center">
-
 # 🇧🇩 Bangladesh Multi-Tool AI Agent
 
-**A multi-tool AI agent for Bangladesh that intelligently routes user queries to structured databases and web search tools.**
-
 [![CI](https://github.com/ShaifulPalash/bangladesh-multi-tool-agent/actions/workflows/ci.yml/badge.svg)](https://github.com/ShaifulPalash/bangladesh-multi-tool-agent/actions/workflows/ci.yml)
-[![Python](https://img.shields.io/badge/Python-3.12+-3776AB?logo=python&logoColor=white)](https://www.python.org/)
-[![LangChain](https://img.shields.io/badge/LangChain-1.x-1C3C3C?logo=langchain&logoColor=white)](https://www.langchain.com/)
-[![LangGraph](https://img.shields.io/badge/LangGraph-Agent-FF6B35)](https://www.langchain.com/langgraph)
-[![Google Gemini](https://img.shields.io/badge/Google%20Gemini-3.6%20Flash-4285F4?logo=google&logoColor=white)](https://ai.google.dev/)
-[![SQLite](https://img.shields.io/badge/SQLite-Database-003B57?logo=sqlite&logoColor=white)](https://www.sqlite.org/)
-[![Streamlit](https://img.shields.io/badge/Streamlit-UI-FF4B4B?logo=streamlit&logoColor=white)](https://streamlit.io/)
-[![Tavily](https://img.shields.io/badge/Tavily-Web%20Search-111827)](https://tavily.com/)
-[![DDGS](https://img.shields.io/badge/DDGS-DuckDuckGo%20Fallback-DE5833?logo=duckduckgo&logoColor=white)](https://github.com/deedy5/ddgs)
-[![License](https://img.shields.io/badge/License-Educational-lightgrey)](#license)
+![Python](https://img.shields.io/badge/Python-3.12+-3776AB?logo=python\&logoColor=white)
+![LangChain](https://img.shields.io/badge/LangChain-1.x-1C3C3C?logo=langchain\&logoColor=white)
+![LangGraph](https://img.shields.io/badge/LangGraph-Agent-FF6B35)
+![Gemini](https://img.shields.io/badge/Google%20Gemini-3.6%20Flash-4285F4?logo=google\&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-Database-003B57?logo=sqlite\&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-UI-FF4B4B?logo=streamlit\&logoColor=white)
+![Tavily](https://img.shields.io/badge/Tavily-Web%20Search-111827)
+![DDGS](https://img.shields.io/badge/DDGS-DuckDuckGo%20Fallback-DE5833?logo=duckduckgo\&logoColor=white)
+![License](https://img.shields.io/badge/License-Educational-lightgrey)
 
-</div>
+> A LangChain/LangGraph-based multi-tool AI agent that answers Bangladesh-focused questions by intelligently routing each query to the appropriate SQLite database or web-search tool.
 
 ---
 
@@ -104,7 +100,6 @@ The agent determines which tool to use based on the user's question rather than 
 ---
 
 # 🏗️ Architecture
-<div align="center">
 
 ```text
                          ┌─────────────────────┐
@@ -163,7 +158,6 @@ The agent determines which tool to use based on the user's question rather than 
                                   ▼
                            Final Answer
 ```
-</div>
 
 ---
 
@@ -172,7 +166,6 @@ The agent determines which tool to use based on the user's question rather than 
 ## End-to-End Data Pipeline
 
 The structured-data pipeline is:
-<div align="center">
 
 ```text
 Hugging Face Dataset
@@ -202,7 +195,6 @@ LangGraph Agent
         ▼
 Natural-Language Answer
 ```
-</div>
 
 ---
 
@@ -215,7 +207,6 @@ How many hospitals are in Dhaka?
 ```
 
 the application follows this process:
-<div align="center">
 
 ```text
 User Question
@@ -244,7 +235,6 @@ Gemini summarizes result
       ▼
 Final Answer
 ```
-</div>
 
 ---
 
@@ -257,7 +247,6 @@ What is the role of the DGHS in Bangladesh?
 ```
 
 the application follows this process:
-<div align="center">
 
 ```text
 User Question
@@ -287,7 +276,6 @@ Gemini 3.6 Flash
       ▼
 Final Answer
 ```
-</div>
 
 ---
 
@@ -833,7 +821,6 @@ What is the healthcare policy in Bangladesh?
 ### Search Priority
 
 The tool uses:
-<div align="center">
 
 ```text
                 Web Search
@@ -853,7 +840,6 @@ The tool uses:
                           ▼
                         Result
 ```
-</div>
 
 ### Primary Provider
 
@@ -872,7 +858,6 @@ This fallback design improves resilience when the primary search provider is una
 Database access is intentionally restricted to read-only operations.
 
 The SQL pipeline is:
-<div align="center">
 
 ```text
 Natural-Language Question
@@ -896,7 +881,6 @@ Natural-Language Question
                  ▼
           Gemini Summary
 ```
-</div>
 
 The SQL safety layer:
 
@@ -1067,7 +1051,6 @@ Example routing:
 # 🔄 Development Workflow
 
 A typical development workflow is:
-<div align="center">
 
 ```text
 1. Activate virtual environment
@@ -1094,7 +1077,6 @@ A typical development workflow is:
           ↓
 12. GitHub Actions runs CI
 ```
-</div>
 
 Useful commands:
 
@@ -1192,7 +1174,6 @@ Gemini API usage is subject to model- and project-specific quotas.
 Because this is an agentic application, one user question can involve multiple Gemini calls.
 
 For example:
-<div align="center">
 
 ```text
 User Question
@@ -1212,7 +1193,6 @@ SQLite
       ▼
 Gemini → Final Response
 ```
-</div>
 
 Therefore, repeatedly testing the application can consume API quota faster than the number of user questions might suggest.
 
